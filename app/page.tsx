@@ -9,11 +9,18 @@ export default function UsersPage() {
   const [pixelSize, setPixelSize] = useState('');
   const [numColors, setNumColors] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [colorMap, setColorMap] = useState([]);
+  const [error, setError] = useState<string | null>(null);
   const [pixelatedImage, setPixelatedImage] = useState(null);
+  
+  type ColorMapItem = {
+    colorNumber: number;
+    hexCode: string;
+  };
 
-  const fileInputRef = useRef(null);
+  const [colorMap, setColorMap] = useState<ColorMapItem[]>([]);
+
+
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -21,7 +28,7 @@ export default function UsersPage() {
     }
   };  
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
