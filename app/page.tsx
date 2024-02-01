@@ -31,10 +31,10 @@ export default function UsersPage() {
       formData.append('num_colors', numColors);
   
       try {
-        const response = await fetch(`${process.env.API_URL}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`, {
           method: 'POST',
           body: formData,
-        });
+        });        
   
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
