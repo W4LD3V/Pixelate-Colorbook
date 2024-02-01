@@ -15,9 +15,11 @@ export default function UsersPage() {
 
   const fileInputRef = useRef(null);
 
-  const handleImageChange = (e) => {
-    setImage(URL.createObjectURL(e.target.files[0]));
-  };
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setImage(URL.createObjectURL(e.target.files[0]));
+    }
+  };  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
