@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useRef } from "react";
 
 export default function UsersPage() {
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState<string | null>(null);
   const [responseImage, setResponseImage] = useState(null);
   const [pixelSize, setPixelSize] = useState('');
   const [numColors, setNumColors] = useState('');
