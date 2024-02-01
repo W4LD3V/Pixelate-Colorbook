@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Pixelate Colorbook - Platform to turn your own images into colorbooks.
+Description:
 
-## Getting Started
+Pixelate Colorbook is a web application designed to help users turn their images into pixelated colorbooks with a few clicks.
+Features:
 
-First, run the development server:
+    Pixelate your images: download a pixelate version of your image without losing the size of the original.
+    Receive a colorbook version of a pixelated image: you can easily download it, print it and color it in by using the presented hex codes.
+    Minimalistic Design: The app's design focuses on simplicity and ease of use, providing users with a clean and intuitive interface to make the exercise logging process hassle-free.
+Technologies Used:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    Next.js: The web application is built using Next.js, a front-end framework in Javascript, to handle routing and HTTP requests.
+    JavaScript: To enhance the user experience, JavaScript is incorporated to generate interactive charts for visualizing workout progress.
+    Python/Flask: The app utilizes python scripting to convert the image design using special libraries.
+    Google Cloud Functions: Was used to host the python/flask script.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Design Choices:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The design of the Pixelate Colorbook prioritizes simplicity and usability, as the main objective was to create a user-friendly and minimalistic exercise logger. Bootstrap was chosen for its responsive layout and pre-designed components, which allowed for quicker development and ensured a consistent look across different devices.
+Instructions:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To run the Pixelate Colorbook, follow these steps:
 
-## Learn More
+    Ensure you have Node installed on your system.
+    Clone the project repository to your local machine.
+    Open a terminal and navigate to the project directory.
+    Go to the main directory and run npm install to install the necesarry dependencies.
+    Set up the necesarry .env variables inside server/config folder (API_URL).
+    Access the application by navigating to http://localhost:3000 in your web browser.
 
-To learn more about Next.js, take a look at the following resources:
+Additional Information:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The Pixelate Colorbook was developed as part of a personal project to enhance programming skills while building a practical and useful application. The app is still a work in progress, and future updates may include more features, such as workout plan customization and social sharing capabilities. Feedback and suggestions are always welcome to improve the app further.
