@@ -33,7 +33,7 @@ export default function UsersPage() {
     setLoading(true);
     setError(null);
   
-    if (fileInputRef.current.files[0]) {
+    if (fileInputRef.current && fileInputRef.current.files && fileInputRef.current.files.length > 0) {
       const formData = new FormData();
       formData.append('input_image', fileInputRef.current.files[0]);
       formData.append('pixel_size', pixelSize);
@@ -43,7 +43,7 @@ export default function UsersPage() {
         const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`, {
           method: 'POST',
           body: formData,
-        });        
+        });
   
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -59,8 +59,13 @@ export default function UsersPage() {
       } finally {
         setLoading(false);
       }
+    } else {
+      // Handle the case where no file is selected
+      setError('Please select a file to upload.');
+      setLoading(false);
     }
-  };  
+  };
+  
 
   return (
     <main className="p-4">
